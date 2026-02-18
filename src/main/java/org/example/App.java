@@ -70,7 +70,7 @@ public class App {
     }
 
     // from here it started Unicode algo
-    private static String encryptUnicode(String text, int key) {
+    public static String encryptUnicode(String text, int key) {
         StringBuilder result = new StringBuilder();
         for (int i = 0; i < text.length(); i++) {
             result.append((char) (text.charAt(i) + key));
@@ -78,7 +78,7 @@ public class App {
         return result.toString();
     }
 
-    private static String decryptUnicode(String text, int key) {
+    public static String decryptUnicode(String text, int key) {
         StringBuilder result = new StringBuilder();
         for (int i = 0; i < text.length(); i++) {
             result.append((char) (text.charAt(i) - key));
@@ -88,7 +88,7 @@ public class App {
 
 
     //  from here it started Shift algo
-    private static String encryptShift(String text, int key) {
+    public static String encryptShift(String text, int key) {
         StringBuilder result = new StringBuilder();
         key = key % 26;
 
@@ -106,7 +106,7 @@ public class App {
         return result.toString();
     }
 
-    private static String decryptShift(String text, int key) {
+    public static String decryptShift(String text, int key) {
         StringBuilder result = new StringBuilder();
         key = key % 26;
 
